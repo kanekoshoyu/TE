@@ -1,0 +1,53 @@
+<template name="form-event">
+    <form>
+        <div>
+            <label>Title</label>
+            <input id="title" type="text" value="{{headline}}" />
+        </div>
+        <div>
+            <label>Start Time</label>
+            <input id="time_start" type="text" value="{{url}}" />
+        </div>
+        <div>
+            <label>End Time</label>
+            <input id="time_end" type="text" value="{{url}}" />
+        </div>
+        <div>
+            <label>External URL</label>
+            <input id="url" type="text" value="{{url}}" />
+        </div>
+        <div>
+            <label>Short Description</label>
+            <textarea id="body" value="" class="input-xlarge">{{body}}</textarea>
+        </div>
+        <div>
+            <label>Category</label>
+            {{#each categories}}
+            <label class="checkbox inline">
+                <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" {{hasCategory}} /> {{name}}
+            </label>
+            {{/each}}
+        </div>
+Still have: 
+Event title        
+Part of series
+Start Time
+End Time
+Timezone
+Description
+Tags
+Category
+Type of Event
+Size
+Location
+Contact Email
+Number
+Link
+Language
+Expected Size
+
+        <div class="form-actions">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</template>
